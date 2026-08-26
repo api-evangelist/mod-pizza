@@ -1,0 +1,11 @@
+generated: '2026-08-25'
+method: searched
+source: https://modpizza.com/
+note: >-
+  No published rate limits. MOD Pizza exposes no public API, no developer documentation and no
+  API reference on any host it controls, so there is no documented quota, window, burst allowance,
+  exhaustion status code or RateLimit/X-RateLimit/Retry-After response header to record. This is a
+  measured zero from a completed search, not an unchecked field.
+limit_count: 0
+rate_limits: []
+headers: []

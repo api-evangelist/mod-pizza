@@ -1,17 +1,37 @@
 aid: mod-pizza
 name: MOD Pizza
-description: 'MOD Pizza is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: >-
+  MOD Pizza is a Seattle-based fast-casual restaurant chain built around individually sized,
+  made-to-order artisan-style pizzas and salads sold at one fixed price regardless of how many
+  of its 40-plus toppings, finishing sauces and dressings a guest chooses. The company operates
+  and franchises hundreds of locations across the United States and runs a digital guest surface
+  consisting of a WordPress marketing site, a Yext-powered store locator, a Koala-powered online
+  ordering storefront at orders.modpizza.com, and a Punchh-powered MOD Rewards loyalty app on iOS
+  and Android. MOD Pizza is a consumer of restaurant-technology APIs rather than a publisher of
+  them: as of this profiling pass it operates no developer program, publishes no OpenAPI, AsyncAPI,
+  GraphQL or MCP contract, and exposes no partner or franchisee API documentation on any host it
+  controls. Delivery is fulfilled through third-party marketplaces such as DoorDash rather than a
+  first-party delivery API.
+image: https://modpizza.com/wp-content/uploads/2021/12/260518_olo_image_square_01-23-1024x1024.jpg
 url: https://raw.githubusercontent.com/api-evangelist/mod-pizza/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+x-tier: profiled
+x-tier-reason: enrichment-pass-completed
 specificationVersion: '0.20'
 created: '2026-08-25'
 modified: '2026-08-25'
 tags:
 - Company
+- Restaurants
+- Food and Beverage
+- Fast Casual
+- Pizza
+- Retail
+- Consumer
+- Loyalty
+- Online Ordering
+- Franchising
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +39,67 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: LLMsTxt
+  url: llms/mod-pizza-llms.txt
+- type: Plans
+  url: plans/mod-pizza-plans-pricing.yml
+- type: DomainSecurity
+  url: security/mod-pizza-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://modpizza.com/
+- type: Blog
+  url: https://modpizza.com/blog/
+- type: News
+  url: https://modpizza.com/news/
+- type: Support
+  url: https://modpizza.com/contact-us/
+- type: FAQ
+  url: https://modpizza.com/faq/
+- type: TermsOfService
+  url: https://modpizza.com/terms/
+- type: PrivacyPolicy
+  url: https://modpizza.com/privacy-policy/
+- type: GitHubOrganization
+  url: https://github.com/MOD-PIZZA
+- type: Locations
+  url: https://locations.modpizza.com/
+- type: OnlineOrdering
+  url: https://orders.modpizza.com/
+- type: Menu
+  url: https://modpizza.com/menu/
+- type: Loyalty
+  url: https://modpizza.com/rewards/
+- type: Franchising
+  url: https://modpizza.com/franchising/
+- type: Careers
+  url: https://modpizza.com/careers/
+x-enrichment:
+  date: '2026-08-25'
+  status: minimal
+  artifacts_added: 5
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: >-
+    MOD Pizza is a fast-casual restaurant chain that consumes restaurant-technology SaaS rather
+    than publishing software: online ordering at orders.modpizza.com is a Koala-powered Next.js
+    storefront calling api.koala.io, the MOD Rewards app ships under Punchh's com.punchh.mod
+    bundle, and locations.modpizza.com is served from Yext's pages CDN -- so every machine-readable
+    contract in the guest journey belongs to a vendor, not to MOD Pizza, which serves no OpenAPI,
+    GraphQL, MCP or .well-known document on any host it controls and has 0 public repositories in
+    its own github.com/MOD-PIZZA organization.
+  evidence:
+    - url: https://modpizza.com/openapi.json
+      status: 404
+    - url: https://modpizza.com/llms.txt
+      status: 404
+    - url: https://modpizza.com/.well-known/api-catalog
+      status: 404
+    - url: https://orders.modpizza.com/.well-known/agent-card.json
+      status: 307
+    - url: https://locations.modpizza.com/openapi.json
+      status: 404
+    - url: https://api.github.com/orgs/MOD-PIZZA
+      status: 200
+  checked: '2026-08-25'

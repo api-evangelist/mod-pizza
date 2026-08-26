@@ -1,0 +1,16 @@
+generated: '2026-08-25'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: modpizza.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Nov 13 19:39:56 2026 GMT
+  hsts: false
+domains:
+- domain: modpizza.com
+  dnssec: false
+  caa: []
+  spf: true
+  dmarc: true
+  dmarc_policy: none

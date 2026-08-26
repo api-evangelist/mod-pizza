@@ -1,0 +1,12 @@
+generated: '2026-08-25'
+method: searched
+source: https://modpizza.com/menu/
+note: >-
+  MOD Pizza publishes no API plans, no developer pricing and no API tiers, because it operates no
+  developer program. The only pricing surface on any host it controls is consumer menu pricing --
+  a fixed price per individually sized pizza regardless of topping count -- which is product
+  pricing, not API access pricing, and is deliberately NOT recorded as a plan here. Its digital
+  ordering and loyalty surfaces are licensed third-party SaaS (Koala for online ordering, Punchh
+  for MOD Rewards); any API commercial terms belong to those vendors, not to MOD Pizza.
+plan_count: 0
+plans: []

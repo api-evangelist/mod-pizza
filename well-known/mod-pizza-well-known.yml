@@ -1,0 +1,89 @@
+generated: '2026-08-25'
+method: probed
+source: >-
+  Live unauthenticated GET of each /.well-known/ path on every host MOD Pizza controls
+  (modpizza.com, orders.modpizza.com, locations.modpizza.com), 2026-08-25.
+note: >-
+  No .well-known document is served on any MOD Pizza host. modpizza.com (WordPress on WP Engine
+  behind Cloudflare) and locations.modpizza.com (Yext pagescdn) return a real 404 for every path.
+  orders.modpizza.com is a Next.js single-page ordering storefront that answers HTTP 307 to "/"
+  for every unmatched path -- a following client sees 200 and an HTML shell, which is the classic
+  SPA catch-all false positive; it is recorded here as a MISS, not a hit. Because nothing returned
+  a 200 carrying a real document, NO WellKnown and NO SecurityTxt pointer is emitted in apis.yml.
+hosts:
+- host: modpizza.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+- host: orders.modpizza.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 307
+    file: null
+    note: SPA catch-all redirect to / -- not a document
+  - path: /.well-known/openid-configuration
+    status: 307
+    file: null
+    note: SPA catch-all redirect to / -- not a document
+  - path: /.well-known/oauth-authorization-server
+    status: 307
+    file: null
+    note: SPA catch-all redirect to / -- not a document
+  - path: /.well-known/api-catalog
+    status: 307
+    file: null
+    note: SPA catch-all redirect to / -- not a document
+  - path: /.well-known/ai-plugin.json
+    status: 307
+    file: null
+    note: SPA catch-all redirect to / -- not a document
+  - path: /.well-known/agent-card.json
+    status: 307
+    file: null
+    note: SPA catch-all redirect to / -- not a document
+  - path: /.well-known/agent.json
+    status: 307
+    file: null
+    note: SPA catch-all redirect to / -- not a document
+- host: locations.modpizza.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
