@@ -12,6 +12,17 @@ description: >-
   GraphQL or MCP contract, and exposes no partner or franchisee API documentation on any host it
   controls. Delivery is fulfilled through third-party marketplaces such as DoorDash rather than a
   first-party delivery API.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://modpizza.com/wp-content/uploads/2021/12/260518_olo_image_square_01-23-1024x1024.jpg
 url: https://raw.githubusercontent.com/api-evangelist/mod-pizza/refs/heads/main/apis.yml
 x-type: company
