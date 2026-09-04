@@ -23,6 +23,19 @@ deliveryModel:
   - pricing
   generated: '2026-08-28'
   method: derived
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source:
+  - rate-limits
+  - security
+  generated: '2026-09-02'
+  method: derived
 image: https://modpizza.com/wp-content/uploads/2021/12/260518_olo_image_square_01-23-1024x1024.jpg
 url: https://raw.githubusercontent.com/api-evangelist/mod-pizza/refs/heads/main/apis.yml
 x-type: company
