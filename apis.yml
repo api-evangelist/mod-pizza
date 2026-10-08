@@ -74,6 +74,8 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: RateLimits
+  url: rate-limits/mod-pizza-rate-limits.yml
 - type: LLMsTxt
   url: llms/mod-pizza-llms.txt
 - type: Plans
